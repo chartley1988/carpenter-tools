@@ -16,16 +16,6 @@ function calculateSpacing(door: Door): number {
   return rounded;
 }
 
-function calculateHingeQuantity(door: Door): number {
-  let qty = 10;
-  let spacing = calculateSpacing(door);
-  while (spacing < 18 && qty > 0) {
-    qty -= 1;
-    spacing = calculateSpacing(door);
-  }
-  return qty;
-}
-
 function convertToSixteenth(number: number) {
   let mod = number % Math.floor(number);
   mod = Math.round(mod * 16);
