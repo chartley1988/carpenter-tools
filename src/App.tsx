@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, ChangeEvent } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 import { Header } from "./components/Header";
 import { Door } from "./types";
 import { calculateHinges, printMeasurement } from "./utilities/calculations";
