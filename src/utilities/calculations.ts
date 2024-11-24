@@ -74,8 +74,17 @@ export function printMeasurement(number: number) {
 function calculateHingeMeasurements(door: Door, spacing: number): number[] {
   const hinges = [];
   for (let i = 0; i < door.hinge_qty; i++) {
-    const hinge = door.top_offset + i * (door.hinge + spacing);
-    hinges.push(hinge);
+    hinges.push(calculateHinge(door, i, spacing));
   }
   return hinges;
+}
+
+function calculateHinge(door: Door, hinge_number: number, spacing: number) {
+  if (door.centered === true) {
+    return (
+      door.top_offset + hinge_number * (door.hinge + spacing) + door.hinge / 2
+    );
+  } else {
+    return door.top_offset + hinge_number * (door.hinge + spacing);
+  }
 }

@@ -5,4 +5,5 @@ export type Door = {
   bottom_offset: number;
   hinge_qty: number;
   hinges: number[];
+  centered: boolean;
 };
