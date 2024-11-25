@@ -6,4 +6,5 @@ export type Door = {
   hinge_qty: number;
   hinges: number[];
   centered: boolean;
+  knob: number;
 };

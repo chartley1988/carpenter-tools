@@ -88,3 +88,7 @@ function calculateHinge(door: Door, hinge_number: number, spacing: number) {
     return door.top_offset + hinge_number * (door.hinge + spacing);
   }
 }
+
+export function calculateKnobHeight(door: Door) {
+  return door.height - door.knob;
+}

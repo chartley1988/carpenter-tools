@@ -16,6 +16,7 @@ function App() {
     hinges: [],
     hinge_qty: 3,
     centered: false,
+    knob: 36,
   });
 
   useEffect(() => {

@@ -1,5 +1,8 @@
 import { Door } from "./../types";
-import { calculateHinges } from "./../utilities/calculations";
+import {
+  calculateHinges,
+  calculateKnobHeight,
+} from "./../utilities/calculations";
 
 export function AdvancedOptions({
   door,
@@ -32,6 +35,29 @@ export function AdvancedOptions({
                 hinges: hinges,
               }));
             }}
+          />
+        </div>
+
+        {/* {Knob Height} */}
+        <div className="mt-3 flex flex-row justify-between gap-3">
+          <label htmlFor="top_offset" className="col-start-1 w-max">
+            Knob Height
+          </label>
+          <input
+            type="number"
+            name="knob"
+            id="knob"
+            min={0}
+            max={300}
+            defaultValue={door.knob}
+            onChange={(e) => {
+              e.stopPropagation();
+              setDoor((prev) => ({
+                ...prev,
+                knob: Number(e.target.value),
+              }));
+            }}
+            className="border-black-900 col-start-2 min-w-40 rounded-md border-2 bg-gray-100 pl-3"
           />
         </div>
 
