@@ -18,13 +18,15 @@ export default function Outputs({ door }: { door: Door }) {
           </li>
         ))}
       </ul>
-      <div className="flex flex-col">
-        <h3 className="font-bold">Knob height from Floor</h3>
-        {door.knob}"
-      </div>
-      <div className="flex flex-col">
-        <h3 className="font-bold">Knob height from top</h3>
-        {calculateKnobHeight(door)}"
+      <div className="flex flex-row justify-between">
+        <div className="flex flex-col">
+          <h3 className="font-bold">Knob ⬆︎</h3>
+          {door.knob}"
+        </div>
+        <div className="flex flex-col">
+          <h3 className="font-bold">Knob ⬇︎</h3>
+          {calculateKnobHeight(door)}"
+        </div>
       </div>
     </>
   );

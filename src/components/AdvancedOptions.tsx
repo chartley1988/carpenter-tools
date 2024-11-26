@@ -44,8 +44,8 @@ export function AdvancedOptions({
             type="number"
             name="knob"
             id="knob"
-            min={0}
-            max={300}
+            min={20}
+            max={240}
             defaultValue={door.knob}
             onChange={(e) => {
               e.stopPropagation();
@@ -68,7 +68,7 @@ export function AdvancedOptions({
             name="top_offset"
             id="top_offset"
             min={0}
-            max={300}
+            max={240 - door.hinge / 2}
             defaultValue={door.top_offset}
             onChange={(e) => {
               e.stopPropagation();

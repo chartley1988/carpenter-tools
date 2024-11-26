@@ -42,7 +42,8 @@ function DoorSizeInput({
         type="number"
         name="height"
         id="height"
-        min={0}
+        min={40}
+        max={240}
         defaultValue={door.height}
         onChange={(e) => {
           e.stopPropagation();
@@ -78,8 +79,8 @@ function HingeSizeInput({
         type="number"
         name="hinge"
         id="hinge"
-        min={3}
-        max={5}
+        min={2}
+        max={6}
         defaultValue={door.hinge}
         onChange={(e) => {
           e.stopPropagation();
