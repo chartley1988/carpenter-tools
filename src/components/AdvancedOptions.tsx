@@ -1,8 +1,5 @@
 import { Door } from "./../types";
-import {
-  calculateHinges,
-  calculateKnobHeight,
-} from "./../utilities/calculations";
+import { calculateHinges } from "./../utilities/calculations";
 
 export function AdvancedOptions({
   door,
